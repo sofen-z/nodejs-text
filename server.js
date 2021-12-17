@@ -19,7 +19,7 @@ var server = http.createServer(function(request, response){
 
   /******** 从这里开始看，上面不要看 ************/
 
-  console.log('有个傻子发请求过来啦！路径（带查询参数）为：' + pathWithQuery)
+  console.log('有个BABY发请求过来啦！路径（带查询参数）为：' + pathWithQuery)
 
   if(path === '/'){
     response.statusCode = 200
@@ -39,11 +39,16 @@ var server = http.createServer(function(request, response){
     response.statusCode = 200
     response.setHeader('Content-Type', 'text/css;charset=utf-8')
     response.write(`
-    body{
+    h1{
+      width: 100px;
       color: red;
       border: 1px solid red;
       background: yellow;
-    }`)
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+    }
+    `)
      response.end()
   } else if(path === '/y'){
     response.statusCode = 200
@@ -53,7 +58,7 @@ var server = http.createServer(function(request, response){
   }else {
    response.statusCode = 404
      response.setHeader('Content-Type', 'text/html;charset=utf-8')
-    response.write(`你输入的路径不存在对应的内容`)
+    response.write(`你访问的页面不存在。`)
     response.end()
   }
 
