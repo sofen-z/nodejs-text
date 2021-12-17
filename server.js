@@ -66,5 +66,5 @@ var server = http.createServer(function(request, response){
 })
 
 server.listen(port)
-console.log('猛男监听 ' + port + ' 成功\n请原地旋转10圈再来打开这个页面 http://localhost:' + port)
+console.log('猛男监听 ' + port + ' 成功\n是猛男就原地旋转10圈再打开这个页面 http://localhost:' + port)
 
