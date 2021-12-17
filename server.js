@@ -19,7 +19,7 @@ var server = http.createServer(function(request, response){
 
   /******** 从这里开始看，上面不要看 ************/
 
-  console.log('有个BABY发请求过来啦！路径（带查询参数）为：' + pathWithQuery)
+  console.log('有个小BABY发请求过来！路径（带查询参数）为：' + pathWithQuery)
 
   if(path === '/'){
     response.statusCode = 200
@@ -30,7 +30,7 @@ var server = http.createServer(function(request, response){
         <link rel="stylesheet" href="/x">
       </head>
       <body>
-        <h1>标题</h1>
+        <h1>你原地旋转10圈了吗？</h1>
         <script src='/y'></script>
       </body>
     `)
@@ -40,7 +40,7 @@ var server = http.createServer(function(request, response){
     response.setHeader('Content-Type', 'text/css;charset=utf-8')
     response.write(`
     h1{
-      width: 100px;
+      width: 500px;
       color: red;
       border: 1px solid red;
       background: yellow;
@@ -58,7 +58,7 @@ var server = http.createServer(function(request, response){
   }else {
    response.statusCode = 404
      response.setHeader('Content-Type', 'text/html;charset=utf-8')
-    response.write(`你访问的页面不存在。`)
+    response.write(`猛男提醒：你访问的页面不存在。`)
     response.end()
   }
 
@@ -66,5 +66,5 @@ var server = http.createServer(function(request, response){
 })
 
 server.listen(port)
-console.log('监听 ' + port + ' 成功\n请用在空中转体720度然后用电饭煲打开 http://localhost:' + port)
+console.log('猛男监听 ' + port + ' 成功\n请原地旋转10圈再来打开这个页面 http://localhost:' + port)
 
